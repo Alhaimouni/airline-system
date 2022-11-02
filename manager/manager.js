@@ -28,3 +28,6 @@ manager.on('new-flight', (payload) => {
   manager.emit('flightDetails', payload);
 });
 
+manager.on('meow', (payload) => {
+  console.log(`Manager: we are greatly thankful for the amazing flight, ${payload.pilot}`);
+});

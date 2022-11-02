@@ -32,5 +32,6 @@ pilot_airline.on('arrived', (payload) => {
     payload.event = 'arrived';
     payload.time = new Date();
     pilot_airline.emit('flightDetails', payload);
+    pilot_hub.emit('pilot_arrived', payload);
   }, 7000);
 });

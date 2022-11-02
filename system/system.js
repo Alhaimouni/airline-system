@@ -19,6 +19,9 @@ hub.on('connection', (clientSocket) => {
   clientSocket.on('flightDetails', (payload) => {
     console.log(payload);
   });
+  clientSocket.on('pilot_arrived', (payload) => {
+    hub.emit('meow', payload);
+  });
 });
 
 airline.on('connection', (clientSocket) => {
